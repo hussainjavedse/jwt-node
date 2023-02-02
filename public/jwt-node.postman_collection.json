@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "e5eb7c14-af8f-4e75-b788-3b486370741f",
+		"name": "jwt-node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18961135"
+	},
+	"item": [
+		{
+			"name": "register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "tester1",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "tester3@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "tester1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "email",
+							"value": "tester2@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "tester1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:4000/users/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "4000",
+					"path": [
+						"users",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add movies",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZGJjNDkyZmZkYzYxN2ZmYWM3MDY0MCIsImlhdCI6MTY3NTM0NzExOCwiZXhwIjoxNjc1MzUwNzE4fQ.Fb7FOuw1ckQz8K5-pFWId_q8qFabnvD4iwrJpULORqU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "d-day",
+							"type": "text"
+						},
+						{
+							"key": "type",
+							"value": "ficiton",
+							"type": "text"
+						},
+						{
+							"key": "released_on",
+							"value": "2022-01-15",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/movies/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"movies",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get movies",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZGJjNDkyZmZkYzYxN2ZmYWM3MDY0MCIsImlhdCI6MTY3NTM0NzExOCwiZXhwIjoxNjc1MzUwNzE4fQ.Fb7FOuw1ckQz8K5-pFWId_q8qFabnvD4iwrJpULORqU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/movies/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"movies",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get movie",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZGJjNDkyZmZkYzYxN2ZmYWM3MDY0MCIsImlhdCI6MTY3NTM0NzExOCwiZXhwIjoxNjc1MzUwNzE4fQ.Fb7FOuw1ckQz8K5-pFWId_q8qFabnvD4iwrJpULORqU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/movies/63dbc734397106e7ec166697",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"movies",
+						"63dbc734397106e7ec166697"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update movie",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZGJjNDkyZmZkYzYxN2ZmYWM3MDY0MCIsImlhdCI6MTY3NTM0NzExOCwiZXhwIjoxNjc1MzUwNzE4fQ.Fb7FOuw1ckQz8K5-pFWId_q8qFabnvD4iwrJpULORqU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "d-dayyy",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3001/movies/63dbc734397106e7ec166697",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"movies",
+						"63dbc734397106e7ec166697"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete movie",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					},
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZGJjNDkyZmZkYzYxN2ZmYWM3MDY0MCIsImlhdCI6MTY3NTM0NzExOCwiZXhwIjoxNjc1MzUwNzE4fQ.Fb7FOuw1ckQz8K5-pFWId_q8qFabnvD4iwrJpULORqU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3001/movies/63dbc734397106e7ec166697",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						"movies",
+						"63dbc734397106e7ec166697"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
